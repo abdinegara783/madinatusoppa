@@ -1,0 +1,536 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madinatusopa Mandiri Haji Travel & Tour</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+</head>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">
+    <a href="#" class="logo">
+        <img src="{% static 'assets/img/logo_2.png' %}" alt="Al-Barakah Logo" class="logo-image">
+    </a>
+</div>
+            <nav class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link active">Beranda</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Tentang Kami</a></li>
+                    <li class="nav-item"><a href="#packages" class="nav-link">Paket</a></li>
+                    <li class="nav-item"><a href="#testimonials" class="nav-link">Testimoni</a></li>
+                    <li class="nav-item"><a href="#documentation" class="nav-link">Dokumentasi</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-cta">
+                <a href="#contact" class="btn btn-primary">Pesan Sekarang</a>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+                <span class="toggle-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <div class="carousel-slide">
+                        <img src="{% static 'assets/img/hero_1.jpeg' %}" alt="Kaaba in Makkah during Hajj">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="{% static 'assets/img/hero_2.jpeg' %}" alt="Masjid al-Nabawi in Madinah">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="{% static 'assets/img/hero_3.jpeg' %}" alt="Pilgrims performing Tawaf around the Kaaba">
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="carousel-indicator active" data-index="0"></button>
+                    <button class="carousel-indicator" data-index="1"></button>
+                    <button class="carousel-indicator" data-index="2"></button>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">PT Madinatusopa Mandiri Tour & Travel</h1>
+                <p class="hero-subtitle">Mulailah perjalanan ke kota-kota suci dengan paket haji premium kami</p>
+                <div class="hero-buttons">
+                    <a href="#packages" class="btn btn-primary">Jelajahi Paket Haji</a>
+                    <a href="#packages" class="btn btn-outline">Temukan Perjalanan Umroh</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="{% static 'assets/img/cp.jpeg' %}" alt="About our company">
+                    </div>
+                    <div class="about-text">
+                        <h2 class="section-title">Tentang PT Madinatussopa Mandiri</h2>
+                        <p>Selama lebih dari 20 tahun, PT Madinatussopa Mandiri telah menyediakan layanan haji dan umroh yang luar biasa bagi para jamaah dari seluruh dunia. Misi kami adalah untuk membuat perjalanan spiritual Anda nyaman, bermakna, dan bebas gangguan.</p>
+                        <p>Dengan pemandu kami yang berpengalaman, akomodasi premium, dan perhatian terhadap detail, kami memastikan bahwa Anda dapat sepenuhnya fokus pada perjalanan spiritual Anda sementara kami mengurus semua logistik.</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <span>20+ Years Experience</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Premium Locations</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar"></i>
+                                <span>Year-round Services</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>24/7 Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section id="packages" class="packages-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Paket Haji & Umroh Kami</h2>
+                    <p class="section-subtitle">Pilih dari paket yang dirancang dengan cermat yang memenuhi berbagai kebutuhan dan preferensi, memastikan perjalanan yang diberkahi dan nyaman.</p>
+                </div>
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <div class="package-image">
+                            <img src="{% static 'assets/img/Paket_1.png' %}" alt="Umrah Package - Standard">
+                        </div>
+                        <div class="package-content">
+                            <h3 class="package-title">Paket Umroh - Standar</h3>
+                            <p class="package-price">Rp 35.000.000</p>
+                            <p class="package-description">Perjalanan spiritual 10 hari ke kota-kota suci Mekkah dan Madinah.</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Akomodasi hotel bintang 5</li>
+                                <li><i class="fas fa-check"></i> Tur dengan pemandu</li>
+                                <li><i class="fas fa-check"></i> Semua makanan termasuk</li>
+                                <li><i class="fas fa-check"></i> Pemrosesan visa</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-block">Lihat Detail</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-image">
+                            <img src="{% static 'assets/img/Paket_2.png' %}" alt="Umrah Package - Premium">
+                        </div>
+                        <div class="package-content">
+                            <h3 class="package-title">Paket Umroh - Premium</h3>
+                            <p class="package-price">Rp 55.000.000</p>
+                            <p class="package-description">Pengalaman premium 14 hari dengan akomodasi mewah dekat situs-situs suci.</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Akomodasi hotel mewah</li>
+                                <li><i class="fas fa-check"></i> Transportasi pribadi</li>
+                                <li><i class="fas fa-check"></i> Semua makanan termasuk</li>
+                                <li><i class="fas fa-check"></i> Pemrosesan visa</li>
+                                <li><i class="fas fa-check"></i> Tur ziarah tambahan</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-block">Lihat Detail</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-image">
+                            <img src="{% static 'assets/img/Paket_3.png' %}" alt="Hajj Package - Complete">
+                        </div>
+                        <div class="package-content">
+                            <h3 class="package-title">Paket Haji - Lengkap</h3>
+                            <p class="package-price">Rp 95.000.000</p>
+                            <p class="package-description">Perjalanan Haji komprehensif 21 hari dengan semua pengaturan yang diurus.</p>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Akomodasi premium</li>
+                                <li><i class="fas fa-check"></i> Ritual dengan pemandu</li>
+                                <li><i class="fas fa-check"></i> Semua makanan termasuk</li>
+                                <li><i class="fas fa-check"></i> Pemrosesan visa</li>
+                                <li><i class="fas fa-check"></i> Dukungan medis</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-block">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Apa Kata Jamaah Kami</h2>
+                    <p class="section-subtitle">Baca tentang pengalaman mereka yang telah memulai perjalanan spiritual bersama kami.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-info">
+                                <h3 class="testimonial-name">Anna Guchi</h3>
+                                <p class="testimonial-location">Sukabumi, Indonesia</p>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star active"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Waktu di mekah saya tidak mendapatkan kupon makan dan tidak mendapartkan kasur sama sekali, jadi harus tidur dilantai di sela sela kasur jamaah, Berpikirlah sebelum menggunakan Travel ini"</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-info">
+                                <h3 class="testimonial-name">Fatima Rahman</h3>
+                                <p class="testimonial-location">Kuala Lumpur, Malaysia</p>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Keluarga saya dan saya menyelesaikan Haji dengan agen ini dan itu adalah pengalaman yang mengubah hidup. Semuanya ditangani secara profesional."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-info">
+                                <h3 class="testimonial-name">Mohammad Siddiq</h3>
+                                <p class="testimonial-location">Jakarta, Indonesia</p>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Perhatian terhadap detail dan kepedulian yang ditunjukkan oleh para pemandu membuat perjalanan Umrah kami menjadi istimewa. Sangat direkomendasikan!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title">Hubungi Kami</h2>
+                        <p>Punya pertanyaan tentang paket Haji dan Umrah kami? Hubungi tim ahli kami yang siap membantu Anda dalam perjalanan spiritual Anda.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Lokasi Kami</h3>
+                                    <p>Jl. Raya Bogor No. 123, Jakarta Timur</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Nomor Telepon</h3>
+                                    <p>+62 21 1234 5678</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Alamat Email</h3>
+                                    <p>info@madinatusopa.co.id</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Jam Kerja</h3>
+                                    <p>Senin - Jumat: 08:00 - 17:00 WIB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <div class="form-card">
+                            <h3 class="form-title">Kirim Pesan Kepada Kami</h3>
+                            <div id="form-success-message" class="form-success-message" style="display: none;">
+                                Terima kasih atas pesan Anda! Kami akan segera menghubungi Anda.
+                            </div>
+                            <form id="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Nama Lengkap</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Nama lengkap Anda" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Alamat Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Alamat email Anda" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Nomor Telepon</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Nomor telepon Anda" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subjek</label>
+                                    <select id="subject" name="subject" class="form-control" required>
+                                        <option value="" selected disabled>Pilih subjek</option>
+                                        <option value="hajj">Paket Haji</option>
+                                        <option value="umrah">Paket Umroh</option>
+                                        <option value="group">Tur Grup</option>
+                                        <option value="custom">Paket Kustom</option>
+                                        <option value="other">Pertanyaan Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Pesan</label>
+                                    <textarea id="message" name="message" class="form-control" placeholder="Pesan Anda" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Kirim Pesan</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation Gallery Section -->
+        <section id="documentation" class="documentation-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Dokumentasi Perjalanan</h2>
+                    <p class="section-subtitle">Jelajahi dokumentasi visual perjalanan dan ritual suci Haji dan Umrah untuk membantu mempersiapkan pengalaman spiritual Anda.</p>
+                </div>
+
+                <div class="documentation-filters">
+                    <button class="filter-button active" data-filter="all">Semua</button>
+                    <button class="filter-button" data-filter="hajj">Haji</button>
+                    <button class="filter-button" data-filter="umrah">Umroh</button>
+                    <button class="filter-button" data-filter="makkah">Mekkah</button>
+                    <button class="filter-button" data-filter="madinah">Madinah</button>
+                </div>
+
+                <div class="documentation-grid">
+                    <div class="documentation-card" data-category="hajj">
+                        <div class="documentation-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Pilgrims at Mount Arafat">
+                            <span class="documentation-category">Hajj</span>
+                        </div>
+                        <div class="documentation-content">
+                            <h3 class="documentation-title">Standing at Mount Arafat</h3>
+                            <p class="documentation-description">The Day of Arafat is considered one of the most important days of Hajj, where pilgrims gather to pray and seek forgiveness.</p>
+                            <div class="documentation-meta">
+                                <div class="documentation-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Dhul Hijjah 9</span>
+                                </div>
+                                <div class="documentation-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Mount Arafat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="documentation-card" data-category="umrah">
+                        <div class="documentation-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Tawaf around the Kaaba">
+                            <span class="documentation-category">Umrah</span>
+                        </div>
+                        <div class="documentation-content">
+                            <h3 class="documentation-title">Tawaf Around the Kaaba</h3>
+                            <p class="documentation-description">Tawaf involves walking seven times counterclockwise around the Kaaba, the most sacred site in Islam.</p>
+                            <div class="documentation-meta">
+                                <div class="documentation-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Year-round</span>
+                                </div>
+                                <div class="documentation-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Masjid al-Haram, Makkah</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="documentation-card" data-category="makkah">
+                        <div class="documentation-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Masjid al-Haram at night">
+                            <span class="documentation-category">Makkah</span>
+                        </div>
+                        <div class="documentation-content">
+                            <h3 class="documentation-title">Masjid al-Haram at Night</h3>
+                            <p class="documentation-description">The Grand Mosque illuminated at night, creating a serene and spiritual atmosphere for worship.</p>
+                            <div class="documentation-meta">
+                                <div class="documentation-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Year-round</span>
+                                </div>
+                                <div class="documentation-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Makkah, Saudi Arabia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="documentation-card" data-category="madinah">
+                        <div class="documentation-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Prophet's Mosque in Madinah">
+                            <span class="documentation-category">Madinah</span>
+                        </div>
+                        <div class="documentation-content">
+                            <h3 class="documentation-title">Masjid al-Nabawi</h3>
+                            <p class="documentation-description">The Prophet's Mosque in Madinah is the second holiest site in Islam and contains the tomb of Prophet Muhammad (PBUH).</p>
+                            <div class="documentation-meta">
+                                <div class="documentation-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Year-round</span>
+                                </div>
+                                <div class="documentation-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Madinah, Saudi Arabia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="documentation-card" data-category="hajj">
+                        <div class="documentation-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Stoning of the Devil at Jamarat">
+                            <span class="documentation-category">Hajj</span>
+                        </div>
+                        <div class="documentation-content">
+                            <h3 class="documentation-title">Stoning of the Jamarat</h3>
+                            <p class="documentation-description">Pilgrims throw pebbles at three pillars representing the devil, symbolizing Ibrahim's rejection of Satan's temptations.</p>
+                            <div class="documentation-meta">
+                                <div class="documentation-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Dhul Hijjah 10-12</span>
+                                </div>
+                                <div class="documentation-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Mina, Saudi Arabia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="documentation-card" data-category="umrah">
+                        <div class="documentation-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Sa'i between Safa and Marwah">
+                            <span class="documentation-category">Umrah</span>
+                        </div>
+                        <div class="documentation-content">
+                            <h3 class="documentation-title">Sa'i Between Safa and Marwah</h3>
+                            <p class="documentation-description">The ritual of walking seven times between the hills of Safa and Marwah, commemorating Hajar's search for water.</p>
+                            <div class="documentation-meta">
+                                <div class="documentation-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Year-round</span>
+                                </div>
+                                <div class="documentation-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Masjid al-Haram, Makkah</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3 class="footer-title">Madinatusopa</h3>
+                        <p class="footer-text">Mitra terpercaya Anda untuk perjalanan Haji dan Umroh, menyediakan layanan luar biasa dan bimbingan spiritual.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-title">Tautan Cepat</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Beranda</a></li>
+                            <li><a href="#">Tentang Kami</a></li>
+                            <li><a href="#packages">Paket Haji</a></li>
+                            <li><a href="#packages">Paket Umroh</a></li>
+                            <li><a href="#">Testimoni</a></li>
+                            <li><a href="#">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-title">Layanan Kami</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Paket Haji</a></li>
+                            <li><a href="#">Paket Umroh</a></li>
+                            <li><a href="#">Tur Grup</a></li>
+                            <li><a href="#">Pemrosesan Visa</a></li>
+                            <li><a href="#">Pemesanan Hotel</a></li>
+                            <li><a href="#">Transportasi</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-title">Buletin</h3>
+                        <p class="footer-text">Berlangganan buletin kami untuk menerima pembaruan tentang paket dan penawaran khusus kami.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Alamat email Anda" class="newsletter-input" required>
+                            <button type="submit" class="btn btn-primary btn-block">Berlangganan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© <span id="current-year"></span> PT Madinatusopa Mandiri Haji & Umroh. Hak Cipta Dilindungi.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'assets/js/scripts.js' %}"></script>
+</body>
+</html>
+

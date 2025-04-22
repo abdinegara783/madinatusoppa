@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}{{ package.name }} - Madinatusopa Mandiri Haji Travel & Tour{% endblock %}
+
+{% block nav_packages_active %}active{% endblock %}
+
+{% block content %}
+<!-- Package Detail Section -->
+<section class="package-detail-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Detail Paket Umroh</h2>
+            <p class="section-subtitle">Informasi lengkap mengenai paket umroh yang kami tawarkan</p>
+        </div>
+
+        <div class="single-package-container">
+            <div class="package-poster">
+                {% if package.package_image %}
+                    <img src="{{ package.package_image.url }}" alt="{{ package.name }}" style="max-width: 100%; height: auto;">
+                {% else %}
+                    <div class="placeholder-poster">
+                        <i class="fas fa-image"></i>
+                        <h3>{{ package.name }}</h3>
+                        <p>Paket Umroh Premium</p>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="package-details">
+                <h1 class="package-title">{{ package.name }}</h1>
+                {% if package.is_promo_active %}
+                <div class="package-price-container">
+                    <p class="package-original-price">Rp {{ package.price|floatformat:0|intcomma }}</p>
+                    <p class="package-promo-price">Rp {{ package.promo_price|floatformat:0|intcomma }} <span class="promo-badge">Promo</span></p>
+                </div>
+                {% else %}
+                <p class="package-price">Rp {{ package.price|floatformat:0|intcomma }}</p>
+                {% endif %}
+                <div class="package-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Keberangkatan: {{ package.departure_date|date:"d F Y" }}</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Durasi: {{ package.duration }} hari</span>
+                    </div>
+                </div>
+
+                <div class="package-description">
+                    <h3>Deskripsi Paket</h3>
+                    <p>{{ package.description }}</p>
+                </div>
+
+                <div class="package-facilities">
+                    <h3>Fasilitas yang Diperoleh</h3>
+                    <ul class="facilities-list">
+                        {% for facility in package.facilities_list %}
+                        <li><i class="fas fa-check"></i> {{ facility }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="package-actions">
+                    <a href="{% url 'home' %}#contact" class="btn btn-primary btn-lg">Pesan Sekarang</a>
+                    <a href="{% url 'home' %}#packages" class="btn btn-outline btn-lg">Lihat Paket Lainnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
