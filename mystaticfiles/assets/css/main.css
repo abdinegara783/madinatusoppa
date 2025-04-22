@@ -85,29 +85,16 @@ ul {
   left: 0;
   width: 100%;
   height: var(--navbar-height);
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 1000;
   transition: var(--transition);
   padding: 0.5rem 0;
-}
-
-.navbar.scrolled {
-  background-color: var(--white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* We're now using a consistent navbar style instead of changing on scroll */
+.navbar.scrolled {
   height: var(--navbar-height-scrolled);
-}
-
-.navbar.scrolled .nav-link {
-  color: var(--text-color);
-}
-
-.navbar.scrolled .nav-link:hover,
-.navbar.scrolled .nav-link.active {
-  color: var(--primary-color);
-}
-
-.navbar.scrolled .logo-text {
-  color: var(--primary-color);
 }
 
 .navbar-container {
@@ -183,7 +170,7 @@ ul {
 .logo-text {
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--primary-color);
   transition: var(--transition);
 }
 
@@ -197,7 +184,7 @@ ul {
 }
 
 .nav-link {
-  color: var(--white);
+  color: var(--text-color);
   font-weight: 600;
   font-size: 1.1rem;
   padding: 0.5rem 0;
@@ -222,7 +209,7 @@ ul {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .navbar.scrolled .nav-link:hover,
@@ -258,7 +245,7 @@ ul {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--text-color);
   transition: var(--transition);
 }
 
@@ -417,6 +404,7 @@ section {
   position: relative;
   height: 600px;
   color: var(--white);
+  margin-top: -100px; /* Offset for the navbar */
 }
 
 .carousel-container {

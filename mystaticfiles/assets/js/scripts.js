@@ -29,25 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
 
-    // Change navbar on scroll
-    // Variable to track scroll position
+    // Change navbar on scroll - simplified to only handle back-to-top button
     window.addEventListener("scroll", () => {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      // Always show navbar when at the top of the page
+      // Only handle back-to-top button visibility
       if (scrollTop <= 50) {
-        navbar.classList.remove("scrolled");
         if (backToTop) backToTop.classList.remove("visible");
-        return;
+      } else {
+        if (backToTop) backToTop.classList.add("visible");
       }
 
-      // Always add scrolled class when not at the top
-      navbar.classList.add("scrolled");
-      if (backToTop) backToTop.classList.add("visible");
-
-      // Make sure navbar is visible
-      navbar.style.transform = "translateY(0)";
-      navbar.style.opacity = "1";
+      // Navbar is always visible with our new CSS
 
       // Store current scroll position for future reference
 
