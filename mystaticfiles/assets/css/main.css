@@ -658,31 +658,38 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: var(--gray-100);
+  min-height: 450px; /* Increased minimum height */
 }
 
 .package-poster-right img {
   max-width: 100%;
   height: auto;
-  max-height: 400px;
+  min-height: 400px; /* Minimum height for the image */
+  max-height: 500px; /* Increased maximum height */
   object-fit: contain;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.package-card-horizontal:hover .package-poster-right img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 @media (min-width: 768px) {
   .package-card-horizontal {
     flex-direction: row;
-    min-height: 400px;
+    min-height: 450px; /* Increased minimum height */
   }
 
   .package-content-left {
-    width: 60%;
+    width: 50%; /* Reduced width to give more space to the image */
   }
 
   .package-poster-right {
-    width: 40%;
+    width: 50%; /* Increased width for the image */
   }
 }
 
@@ -1050,7 +1057,22 @@ section {
   box-shadow: var(--box-shadow);
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px; /* Increased max width */
+}
+
+/* Add media query for larger screens */
+@media (min-width: 992px) {
+  .single-package-container {
+    flex-direction: row;
+  }
+
+  .package-poster {
+    width: 60%; /* Give more space to the image */
+  }
+
+  .package-details {
+    width: 40%;
+  }
 }
 
 .package-poster {
@@ -1060,20 +1082,27 @@ section {
   align-items: center;
   padding: 2rem;
   background-color: var(--gray-100);
+  min-height: 600px; /* Increased minimum height */
 }
 
 .package-poster img {
   max-width: 100%;
   height: auto;
-  max-height: 500px;
+  min-height: 500px; /* Minimum height for the image */
+  max-height: 700px; /* Increased maximum height */
   object-fit: contain;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.package-poster:hover img {
+  transform: scale(1.03); /* Slight zoom effect on hover */
 }
 
 .package-poster .placeholder-poster {
   width: 100%;
-  height: 400px;
+  height: 600px; /* Increased height to match the new poster size */
   background-color: var(--primary-light);
   display: flex;
   flex-direction: column;
@@ -1086,18 +1115,19 @@ section {
 }
 
 .package-poster .placeholder-poster i {
-  font-size: 4rem;
+  font-size: 6rem; /* Larger icon */
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.package-poster .placeholder-poster h3 {
+  font-size: 2.5rem; /* Larger heading */
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-.package-poster .placeholder-poster h3 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
 .package-poster .placeholder-poster p {
+  font-size: 1.25rem; /* Larger text */
   color: var(--text-light);
 }
 
