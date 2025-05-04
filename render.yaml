@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: madinatusopa-web
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn apps.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_SETTINGS_MODULE
+        value: apps.settings
